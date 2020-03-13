@@ -1,0 +1,11 @@
+[package]
+name = "sigstackoverflow"
+version = "0.1.0"
+authors = ["iximeow <me@iximeow.net>"]
+edition = "2018"
+
+[dependencies]
+libc = "*"
+
+[[bin]]
+name = "sigalrmy"
