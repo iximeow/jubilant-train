@@ -1,5 +1,5 @@
 # Signal stack overflow examples
-This repo contains two example programs that, in debug builds, overflow their signal stacks and demonstrate some possible outcomes in a rust program built today. These also serve as demonstrations for failure modes (`Segmentation fault (core dumped)`) in rusts built with the changes in [WIP].
+This repo contains two example programs that, in debug builds, overflow their signal stacks and demonstrate some possible outcomes in a rust program built today. These also serve as demonstrations for failure modes (`Segmentation fault (core dumped)`) in `rust`s built with the changes from [this PR](https://github.com/rust-lang/rust/pull/69969).
 
 `cargo run --bin sigstackoverflow` demonstrates a signal stack overflow in a signal handler handling `SIGSEGV`, where `cargo run --bin sigalrmy` demonstrates a signal stack overflow in a handler handling `SIGALRM`. Release builds don't cause errors because the padding array is found to be unneeded and discarded.
 
